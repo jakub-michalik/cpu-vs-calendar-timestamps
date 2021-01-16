@@ -1,5 +1,5 @@
 # cpu-vs-calendar-timestamps
-Differences in the calculation of the calendar time and CPU time
+Differences in the calculation of the calendar time and CPU time (POSIX)
 
 If you’re trying to optimize your program or measure its efficiency, it’s very useful to know how much processor time it uses. For that, calendar time and elapsed times are useless because a process may spend time waiting for I/O or for other processes to use the CPU. However, by compileing this example you could check on your device and see the difference. 
 
