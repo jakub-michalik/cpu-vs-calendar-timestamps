@@ -1,15 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 int main(void) {
   clock_t start_cpu, end_cpu;
   double cpu_time_used;
-  double i;
+  double i, j;
+  
   start_cpu = clock();
+  
+  /* increase the computational intensity with complex operations */
   for (i = 0; i < 100000000; i++) {
-    i += 3;
+    j = sqrt(i) * pow(i, 2);
   }
+  
   usleep(200000); // 200ms
 
   end_cpu = clock();
@@ -22,14 +27,16 @@ int main(void) {
   gettimeofday( & timecheck, NULL);
   start = (long) timecheck.tv_sec * 1000 + (long) timecheck.tv_usec / 1000;
 
-  usleep(200000); // 200ms
   for (i = 0; i < 100000000; i++) {
-    i += 3;
+    j = sqrt(i) * pow(i, 2);
   }
+  
+  usleep(200000); // 200ms
 
   gettimeofday( & timecheck, NULL);
   end = (long) timecheck.tv_sec * 1000 + (long) timecheck.tv_usec / 1000;
 
   printf("Milliseconds elapsed %ld \n", (end - start));
 
+  return 0;
 }
