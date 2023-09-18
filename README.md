@@ -16,6 +16,6 @@ Understanding the distinction between CPU time and calendar time is crucial for 
 
 In conclusion, while calendar time is a macro-level, exterior measure of time passage, CPU time serves as a micro-level, interior measure of a program's execution and resource usage. Both are important, but serve different purposes in system level programming and software optimization strategies.
 
-## Code example ![example workflow](https://github.com/jakub-michalik/cpu-vs-calendar-timestamps/actions/workflows/cmake-multi-platform.yml/badge.svg)
+## Status build: ![example workflow](https://github.com/jakub-michalik/cpu-vs-calendar-timestamps/actions/workflows/cmake-multi-platform.yml/badge.svg)
 
 
