@@ -28,7 +28,7 @@ make
 
 ## The result
 
-* CPU time elapsed 1.843870 
+* CPU time elapsed 1.843870 [s]
 * Milliseconds elapsed 2054 
 
 The results show that the CPU clock time taken (clock function) and the wall clock time (gettimeofday function) are not the same. Hence, these two measures reflect different aspects of running time.
