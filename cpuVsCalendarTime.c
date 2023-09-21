@@ -12,9 +12,9 @@ int main(void) {
   start_cpu = clock();
   
   /* increase the computational intensity with complex operations */
-  for (i = 0; i < 100000000; i++) {
-    j = sqrt(i) * pow(i, 2);
-  }
+  // for (i = 0; i < 100000000; i++) {
+  //   j = sqrt(i) * pow(i, 2);
+  // }
   
   usleep(200000); // 200ms
 
@@ -28,9 +28,10 @@ int main(void) {
   gettimeofday( & timecheck, NULL);
   start = (long) timecheck.tv_sec * 1000 + (long) timecheck.tv_usec / 1000;
 
-  for (i = 0; i < 100000000; i++) {
-    j = sqrt(i) * pow(i, 2);
-  }
+  /* increase the computational intensity with complex operations */
+  // for (i = 0; i < 100000000; i++) {
+  //   j = sqrt(i) * pow(i, 2);
+  // }
   
   usleep(200000); // 200ms
 
