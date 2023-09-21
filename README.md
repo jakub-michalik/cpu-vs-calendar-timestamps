@@ -1,4 +1,4 @@
-Status build: ![example workflow](https://github.com/jakub-michalik/cpu-vs-calendar-timestamps/actions/workflows/cmake-multi-platform.yml/badge.svg)
+![example workflow](https://github.com/jakub-michalik/cpu-vs-calendar-timestamps/actions/workflows/cmake-multi-platform.yml/badge.svg)
 
 # CPU vs calendar timestamps
 
