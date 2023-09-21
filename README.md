@@ -18,5 +18,21 @@ Understanding the distinction between CPU time and calendar time is crucial for 
 
 In conclusion, while calendar time is a macro-level, exterior measure of time passage, CPU time serves as a micro-level, interior measure of a program's execution and resource usage. Both are important, but serve different purposes in system level programming and software optimization strategies.
 
+# Result
 
+* CPU time elapsed 1.843870 
+* Milliseconds elapsed 2054 
 
+The results show that the CPU clock time taken (clock function) and the wall clock time (gettimeofday function) are not the same. Hence, these two measures reflect different aspects of running time.
+
+1. Clock Function: The clock function measures the time the CPU spends executing instructions of the calling process. The CPU time is reported in "ticks" or "jiffies", as opposed to real time. These ticks are a direct measure of the CPU's work. Non-CPUs tasks like waiting for disk activity, waiting for its turn to be dispatched, waiting for a lock, etc, are not factors. The CPU time is a useful measure for understanding the actual load placed on CPU by the given code. In this program, it's approximately 1.84 seconds.
+
+2. gettimeofday Function: This function gives the total elapsed time (wall-clock time) for the code's execution. This includes time spent executing the CPU instructions as well as time waiting for IO operations, waiting for resources (like locks), waiting for system calls, etc. This is why it's longer than the CPU time. In this program, it's approximately 2.05 seconds.
+
+For the usleep function, the CPU isn't doing much work - it's just waiting for the sleep duration to end. That's why the CPU time doesn't increment significantly during the sleep, but the actual time (gettimeofday) still proceeds as usual.
+
+In general, wall-clock time is what you experience as the running time of your code. But CPU time is a more accurate measure of how much actual CPU computation is being used. This is necessarily lesser or equal to wall-clock time. 
+
+Lastly, the difference between CPU time and wall-clock time can provide some indication of how much time is spent in the CPU versus waiting for other system resources (like I/O, network, database queries, etc.). 
+
+In a multi-threaded, multi-core or distributed computing environment, where multiple processors or machines are involved, measuring CPU time can be more complex, as the computation may be spread across different processing units.
