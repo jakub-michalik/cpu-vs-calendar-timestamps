@@ -22,7 +22,7 @@ In conclusion, while calendar time is a macro-level, exterior measure of time pa
 
 ```
 cd cpu-vs-calendar-timestamps
-ccmake . 
+ccmake .
 make 
 ```
 
